@@ -29,9 +29,9 @@ function SalesPersonHistory() {
   };
 
   return (
-    <div>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Salesperson History</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Salesperson History</h1>
       </div>
       <div>
         <select
@@ -82,7 +82,7 @@ function SalesPersonHistory() {
         </table>
       </div>
     </div>
-  );
+);
 }
 
 export default SalesPersonHistory;

@@ -14,11 +14,11 @@ function TechnicianList() {
 
   return (
     <>
-      <div>
-        <h1 className="text-center large-heading">Technicians</h1>
-      </div>
-      <div>
-        <table className="table table-bordered small-heading">
+    <div style={{ paddingTop: '4em', position: 'relative', zIndex: 2 }}>
+      <h1 className="text-center large-heading" style={{ color: '#fff' }}>Technicians</h1>
+    </div>
+    <div>
+      <table className="table table-bordered small-heading">
           <thead>
             <tr>
               <th>First Name</th>

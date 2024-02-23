@@ -78,11 +78,11 @@ const Create_Appointment = () => {
   };
 
   return (
-    <div className="row">
-      <div className="offset-3 col-6">
-        <div className="shadow p-4 mt-4 forms">
-          <h1>Create a new Appointment</h1>
-          <form onSubmit={handleSubmit} id="create-Appointment-form">
+    <div className="row" style={{ paddingTop: '4em', position: 'relative', zIndex: 2 }}>
+    <div className="offset-3 col-6">
+      <div className="shadow p-4 mt-4 forms" style={{backgroundColor: '#fff', borderRadius: '15px'}}>
+        <h1 style={{padding: '1em'}}>Create a new Appointment</h1>
+        <form onSubmit={handleSubmit} id="create-Appointment-form">
             {submitted && valid ? <div>Success! You created an Appointment</div> : null}
 
             <div className="form-floating mb-3">

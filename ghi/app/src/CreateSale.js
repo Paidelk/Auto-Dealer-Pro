@@ -104,10 +104,10 @@ function CreateSale() {
   };
 
   return (
-    <div className="row">
+    <div className="row" style={{ paddingTop: '4em', position: 'relative', zIndex: 2 }}>
       <div className="offset-3 col-6">
-        <div className="shadow p-4 mt-4 forms">
-          <h1>Record a New Sale</h1>
+        <div className="shadow p-4 mt-4 forms" style={{backgroundColor: '#fff', borderRadius: '15px'}}>
+          <h1 style={{padding: '1em'}}>Record a New Sale</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-floating mb-3">
               <select
@@ -173,7 +173,6 @@ function CreateSale() {
                 id="price"
                 className="form-control"
               />
-
               <label htmlFor="price">Price</label>
             </div>
             <button className="btn btn-dark">Record Sale</button>
@@ -181,7 +180,7 @@ function CreateSale() {
         </div>
       </div>
     </div>
-  );
+);
 }
 
 export default CreateSale;

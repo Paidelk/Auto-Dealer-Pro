@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function AppointmentList() {
   const [appointments, setAppointments] = useState([]);
-  const [serviceHistory, setServiceHistory] = useState([]);
+  const [, setServiceHistory] = useState([]);
 
   const fetchAppointments = () => {
     fetch('http://localhost:8080/api/appointments/')
@@ -17,21 +17,18 @@ function AppointmentList() {
           return appointment.status === 'finished' || appointment.status === 'canceled';
         });
 
-        // Fetch details of each appointment's VIN from the inventory
+
         Promise.all(
           filteredAppointments.map(async appointment => {
             try {
               const response = await fetch(`http://localhost:8080/api/appointments/${appointment.id}/`);
               const appointmentData = await response.json();
-              // Extract the dealership_purchase value from the appointment data
-              const dealershipPurchase = appointmentData.dealership_purchase || false;
-              // Update appointment with dealership_purchase information
-              appointment.dealership_purchase = dealershipPurchase;
+
+              return { ...appointment, dealership_purchase: appointmentData.dealership_purchase || false };
             } catch (error) {
               console.error('Error:', error);
-              appointment.dealership_purchase = false; // Set to false in case of error or no data
+              return { ...appointment, dealership_purchase: false };
             }
-            return appointment;
           })
         ).then(updatedAppointments => {
           setAppointments(updatedAppointments);
@@ -72,7 +69,7 @@ function AppointmentList() {
 
   return (
     <>
-      <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <div className="d-grid gap-2 d-sm-flex justify-content-sm-center" style={{ paddingTop: '4em' }}>
         <table className="table table-bordered small-heading">
           <thead>
             <tr>
@@ -120,7 +117,7 @@ function AppointmentList() {
         </table>
       </div>
       <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <Link to="/appointments/create" className="btn btn-dark buttons btn-lg px-4 gap-3">
+        <Link to="/appointments/create" className="btn btn-primary buttons btn-lg px-4 gap-3">
           Create Appointment
         </Link>
       </div>

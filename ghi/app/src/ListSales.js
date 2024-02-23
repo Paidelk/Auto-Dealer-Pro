@@ -16,9 +16,9 @@ function ListSales() {
   }, []);
 
   return (
-    <>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Sales</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Sales</h1>
       </div>
       <div>
         <table className="table table-bordered small-heading">
@@ -50,8 +50,8 @@ function ListSales() {
           </tbody>
         </table>
       </div>
-    </>
-  );
+    </div>
+);
 }
 
 export default ListSales;
