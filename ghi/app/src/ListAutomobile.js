@@ -16,9 +16,9 @@ function ListAutomobile() {
   }, []);
 
   return (
-    <>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Automobiles</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Automobiles</h1>
       </div>
       <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <table className="table table-bordered small-heading">
@@ -41,7 +41,7 @@ function ListAutomobile() {
                   <td>{auto.color}</td>
                   <td>{auto.model.name}</td>
                   <td>{auto.model.manufacturer.name}</td>
-                  <td>{auto.sold ? 'Yes' : 'No'}</td> 
+                  <td>{auto.sold ? 'Yes' : 'No'}</td>
                 </tr>
               );
             })}
@@ -53,8 +53,8 @@ function ListAutomobile() {
           Create Automobile
         </Link>
       </div>
-    </>
-  );
+    </div>
+);
 }
 
 export default ListAutomobile;

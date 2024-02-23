@@ -16,9 +16,9 @@ function ListSalesPerson() {
   }, []);
 
   return (
-    <>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Sales People</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Sales People</h1>
       </div>
       <div>
         <table className="table table-bordered small-heading">
@@ -42,8 +42,8 @@ function ListSalesPerson() {
           </tbody>
         </table>
       </div>
-    </>
-  );
+    </div>
+);
 }
 
 export default ListSalesPerson;

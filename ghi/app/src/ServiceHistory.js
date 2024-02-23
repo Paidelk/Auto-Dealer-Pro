@@ -33,23 +33,23 @@ const ServiceHistory = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col-sm-5">
-          <div className="input-group mb-1">
-            <input
-              id="search-input"
-              type="search"
-              className="form-control"
-              placeholder="Search by VIN or Customer Name"
-              onChange={handleSearchChange}
-              value={searchInput}
-            />
-            <button id="search-button" type="button" className="btn btn-outline-primary">
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
+    <div className="row" style={{ paddingTop: '4em' }}>
+      <div className="col-sm-5">
+        <div className="input-group mb-1">
+          <input
+            id="search-input"
+            type="search"
+            className="form-control"
+            placeholder="Search by VIN or Customer Name"
+            onChange={handleSearchChange}
+            value={searchInput}
+          />
+          <button id="search-button" type="button" className="btn btn-primary">
+            <i className="fas fa-search"></i>
+          </button>
         </div>
       </div>
+    </div>
 
       <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <table className="table table-bordered table-striped">

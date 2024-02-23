@@ -19,9 +19,9 @@ function ListModels() {
   }, []);
 
   return (
-    <>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Models</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Models</h1>
       </div>
       <div>
         <table className="table table-bordered small-heading">
@@ -49,7 +49,7 @@ function ListModels() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 

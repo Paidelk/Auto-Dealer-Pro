@@ -19,9 +19,9 @@ function ListManufacturer() {
   }, []);
 
   return (
-    <>
+    <div style={{ paddingTop: '4em' }}>
       <div>
-        <h1 className="text-center large-heading">Manufacturers</h1>
+        <h1 className="text-center large-heading" style={{color: '#fff'}}>Manufacturers</h1>
       </div>
       <div>
         <table className="table table-bordered small-heading">
@@ -39,8 +39,8 @@ function ListManufacturer() {
           </tbody>
         </table>
       </div>
-    </>
-  );
+    </div>
+);
 }
 
 export default ListManufacturer;
