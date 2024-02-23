@@ -1,5 +1,5 @@
-# CarCar
-CarCar is an app for managing everything in an auto dealership - from cars to sales, and from salespeople to technicians and services.
+# Auto Dealer Pro
+Auto Dealer Pro is an app for managing everything in an auto dealership - from cars to sales, and from salespeople to technicians and services.
 
 ## Team
 - **Henry Martija** - Takes care of Auto Sales.
